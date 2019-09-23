@@ -9,7 +9,7 @@ const Wrapper = styled.header`
 const Title = styled.h1`
   color: #000000;
   font-size: 3rem;
-  text-decoration: none; 
+  text-decoration: none;
 `;
 
 const NavList = styled.ul`
@@ -20,7 +20,7 @@ const NavList = styled.ul`
 
 const NavItem = styled.a`
   color: #999;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-right: 1.3rem;
   text-decoration: none;
   cursor: pointer;
@@ -40,15 +40,24 @@ const Header: React.FC = () => {
       <nav>
         <NavList>
           <li data-testid="navlink">
-            <Link href="/"><NavItem>Home</NavItem></Link>
+            <Link href="/">
+              <NavItem>Home</NavItem>
+            </Link>
           </li>
           <li data-testid="navlink">
-            <Link href="/about"><NavItem>About</NavItem></Link>
+            <Link href="/blog">
+              <NavItem>Blog</NavItem>
+            </Link>
+          </li>
+          <li data-testid="navlink">
+            <Link href="/about">
+              <NavItem>About</NavItem>
+            </Link>
           </li>
         </NavList>
       </nav>
     </Wrapper>
-  )
-}
+  );
+};
 
 export default Header;
